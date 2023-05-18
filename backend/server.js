@@ -9,12 +9,12 @@ require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 // express app
 const app = express()
-// middleware
-app.use(express.json())
 
-// Enable CORS
+// enable CORS
 app.use(cors())
 
+// middleware
+app.use(express.json())
 
 app.use((req, res, next) => {
   console.log(req.path, req.method)
@@ -42,3 +42,5 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((error) => {
     console.log(error)
   })
+
+  

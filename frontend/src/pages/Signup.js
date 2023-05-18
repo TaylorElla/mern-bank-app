@@ -26,8 +26,9 @@ const Signup = () => {
     <Container>
       <div className="signup-container">
         <Card className="signup-card">
+        <Card.Header>Sign Up</Card.Header>
           <Card.Body>
-            <Card.Title>Sign Up</Card.Title>
+            
 
             <Form onSubmit={handleSubmit}>
               <Form.Group controlId="formBasicName">

@@ -1,5 +1,5 @@
 {
-  "proxy": "https://taylorella-mern-stack-app.herokuapp.com/",
+  "proxy": "https://taylorella-mern-stack-app.herokuapp.com",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,

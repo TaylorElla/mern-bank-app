@@ -26,7 +26,7 @@ const TransactionForm = () => {
 
     const transaction = { title, amount, type };
 
-    const response = await fetch('/api/transactions', {
+    const response = await fetch('https://taylorella-mern-stack-app.herokuapp.com/api/transactions', {
       method: 'POST',
       body: JSON.stringify(transaction),
       headers: {

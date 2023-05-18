@@ -15,7 +15,7 @@ const TransactionDetails = ({ transaction }) => {
       return;
     }
 
-    const response = await fetch('/api/transactions/' + transaction._id, {
+    const response = await fetch('https://taylorella-mern-stack-app.herokuapp.com/api/transactions/' + transaction._id, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${user.token}`

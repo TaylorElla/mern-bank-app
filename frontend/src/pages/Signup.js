@@ -26,7 +26,9 @@ const Signup = () => {
     <Container>
       <div className="signup-container">
         <Card className="signup-card">
-        <Card.Header>Sign Up</Card.Header>
+          <Card.Header className="text-center" as="h4">
+          Sign Up
+          </Card.Header>
           <Card.Body>
             
 
@@ -58,9 +60,11 @@ const Signup = () => {
                 />
               </Form.Group>
 
-              <Button variant="primary" type="submit" disabled={isLoading}>
-                Sign up
-              </Button>
+              <div className="text-center">
+                <Button variant="primary" type="submit" disabled={isLoading}>
+                  Sign up
+                </Button>
+              </div>
             </Form>
 
             {error && <Alert variant="danger">{error}</Alert>}

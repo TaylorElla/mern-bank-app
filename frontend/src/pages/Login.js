@@ -28,7 +28,7 @@ const Login = () => {
     <Container>
       <div className="login-container">
         <Card className="login-card">
-          <Card.Header className="text-center" as="h4">
+          <Card.Header className="text-center bg-dark text-light" as="h4">
             Log In
           </Card.Header>
           <Card.Body>

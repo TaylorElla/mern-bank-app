@@ -24,8 +24,8 @@ const CustomNavbar = () => {
             <img
               alt=""
               src="/images/bank5.png"
-              width="25"
-              height="25"
+              width="30"
+              height="30"
               className="d-inline-block align-top"
             />
             <h5>Bank-App</h5>

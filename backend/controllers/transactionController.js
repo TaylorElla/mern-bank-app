@@ -1,5 +1,3 @@
-import { useAuthContext } from '../hooks/useAuthContext';
-
 const Transaction = require('../models/transactionModel')
 const User = require('../models/userModel')
 const mongoose = require('mongoose')
@@ -59,10 +57,6 @@ const createTransaction = async (req, res) => {
 
     const user = await User.findById(user_id);
     await user.updateBalance(transactionAmount, transactionType);
-
-    // Update the balance in the context
-    const { dispatch } = useAuthContext();
-    dispatch({ type: 'UPDATE_BALANCE', payload: user.balance });
 
     res.status(200).json({transaction, balance: user.balance});
   } catch (error) {

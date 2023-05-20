@@ -8,6 +8,8 @@ export const authReducer = (state, action) => {
       return { user: action.payload, balance: action.payload.balance }
     case 'LOGOUT':
       return { user: null, balance: 0 }
+    case 'UPDATE_USER':
+      return { user: action.payload, balance: action.payload.balance }
     default:
       return state
   }

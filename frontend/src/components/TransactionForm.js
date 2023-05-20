@@ -8,7 +8,7 @@ import Card from 'react-bootstrap/Card';
 
 const TransactionForm = () => {
   const { dispatch } = useTransactionsContext();
-  const { user } = useAuthContext();
+  const { user, dispatch: authDispatch } = useAuthContext();
 
   const [title, setTitle] = useState('');
   const [amount, setAmount] = useState('');
@@ -47,6 +47,12 @@ const TransactionForm = () => {
       setType('');
       setError(null);
       setEmptyFields([]);
+
+      // Update the balance in the local storage and auth context
+      const updatedUser = { ...user, balance: json.balance };
+      localStorage.setItem('user', JSON.stringify(updatedUser));
+      authDispatch({ type: 'UPDATE_USER', payload: updatedUser });
+
       dispatch({ type: 'CREATE_TRANSACTION', payload: json });
     }
   };

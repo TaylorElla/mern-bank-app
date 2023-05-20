@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react';
 import { useTransactionsContext } from "../hooks/useTransactionsContext";
 import { useAuthContext } from "../hooks/useAuthContext";
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Card, Container, Row, Col } from 'react-bootstrap';
+
 
 import TransactionDetails from '../components/TransactionDetails';
 import TransactionForm from '../components/TransactionForm';
@@ -34,13 +32,13 @@ const MyAccount = () => {
     <Container className="my-5">
       <Row>
         <Col md={8}>
-          <Card className="welcomeCard">
-            <Card.Header className="text-center" as="h4">Welcome, {user.name}!</Card.Header>
+          <Card className="welcomeCard" bg="light" border="secondary" style={{ boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)' }}>
+            <Card.Header className="text-center bg-secondary text-light" as="h5">Welcome, {user.name}!</Card.Header>
             <Card.Body>
               <Card.Text>
-                This is your account page! Here, you can easily deposit or withdraw money, allowing you to manage your funds according to your needs. Keep track of all your transactions conveniently in one place, so you always have a clear overview of your financial activity. Start exploring your account and take control of your financial journey today!
+                This is your account page! Here, you can easily deposit or withdraw money. Keep track of all your transactions conveniently in one place, so you always have a clear overview of your financial activity. Start exploring your account and take control of your financial journey today!
               </Card.Text>
-              <Card.Text as='h5'>Your current balance is: ${user.balance}</Card.Text>
+              <Card.Text className="text-center" as='h5'>Your current balance is: ${user.balance}</Card.Text>
               <Card.Text>Below are your recent transactions:</Card.Text>
               <div className="transactions">
                 {transactions && transactions.map((transaction) => (

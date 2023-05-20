@@ -58,7 +58,7 @@ const createTransaction = async (req, res) => {
     const user = await User.findById(user_id);
     await user.updateBalance(transactionAmount, transactionType);
 
-    res.status(200).json({transaction, balance: user.balance});
+    res.status(200).json(transaction);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

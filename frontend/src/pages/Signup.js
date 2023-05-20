@@ -24,8 +24,14 @@ const Signup = () => {
 
   return (
     <Container>
-      <div className="signup-container">
-        <Card className="signup-card">
+      <div style={{ 
+      display: 'flex', 
+      justifyContent: 'center', 
+      alignItems: 'center', 
+      height: '60vh', 
+      paddingTop: '50px' 
+      }}>
+        <Card className="signup-card" bg="light" border="dark" style={{ width: '40rem', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)' }}>
           <Card.Header className="text-center bg-dark text-light" as="h4">
           Sign Up
           </Card.Header>
@@ -37,6 +43,7 @@ const Signup = () => {
                 <Form.Label>Name:</Form.Label>
                 <Form.Control
                   type="text"
+                  placeholder="Enter your name"
                   onChange={(e) => setName(e.target.value)}
                   value={name}
                 />
@@ -46,6 +53,7 @@ const Signup = () => {
                 <Form.Label>Email address:</Form.Label>
                 <Form.Control
                   type="email"
+                  placeholder="Enter your email"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
                 />
@@ -55,6 +63,7 @@ const Signup = () => {
                 <Form.Label>Password:</Form.Label>
                 <Form.Control
                   type="password"
+                  placeholder="Enter your password"
                   onChange={(e) => setPassword(e.target.value)}
                   value={password}
                 />
@@ -65,7 +74,7 @@ const Signup = () => {
                   Sign up
                 </Button>
               </div>
-            </Form>
+            </Form><br />
 
             {error && <Alert variant="danger">{error}</Alert>}
           </Card.Body>

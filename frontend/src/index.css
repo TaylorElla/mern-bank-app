@@ -102,29 +102,6 @@ input.error {
 }
 
 /* navbar */
-.navbar {
-  height: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.navbar .navbar-brand {
-  height: 100%;
-}
-
-nav a, nav button {
-  margin-left: 10px;
-}
-
-.authLinks {
-  display: flex;
-  align-items: center;
-  margin-left: 10px;
-}
-
-.authLinks > * + * {
-  margin-left: 10px;
-}
-
 .brand-content {
   display: flex;
   align-items: center;
@@ -134,21 +111,4 @@ nav a, nav button {
 .brand-content img {
   margin-right: 10px;
   margin-bottom: 5px;
-}
-
-
-
-/* auth forms */
-form.signup, form.login {
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 4px;
-}
-.signup-container {
-  margin-top: 40px;
-}
-.login-container {
-  margin-top: 40px;
 }

@@ -26,7 +26,7 @@ const TransactionForm = () => {
 
     const transaction = { title, amount, type };
 
-    const response = await fetch('/api/transactions', {
+    const response = await fetch('https://taylorella-mern-stack-app.herokuapp.com/api/transactions', {
       method: 'POST',
       body: JSON.stringify(transaction),
       headers: {
@@ -58,8 +58,8 @@ const TransactionForm = () => {
   };
 
   return (
-    <Card className="transaction-form-card" bg="light" border="info" style={{ boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)' }}>
-      <Card.Header className="text-center bg-info text-light" as="h5">Make a New Transaction</Card.Header>
+    <Card className="transaction-form-card">
+      <Card.Header className="text-center" as="h5">Make a New Transaction</Card.Header>
       <Card.Body>
 
         <Form.Group controlId="formType">
@@ -79,7 +79,6 @@ const TransactionForm = () => {
             <Form.Label>Amount:</Form.Label>
             <Form.Control
               type="number"
-              placeholder="Enter a dollar amount"
               onChange={(e) => setAmount(e.target.value)}
               value={amount}
               className={emptyFields.includes('amount') ? 'error' : ''}
@@ -88,10 +87,9 @@ const TransactionForm = () => {
 
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="formTitle">
-            <Form.Label>Memo:</Form.Label>
+            <Form.Label>Description:</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Add a description"
               onChange={(e) => setTitle(e.target.value)}
               value={title}
               className={emptyFields.includes('title') ? 'error' : ''}
@@ -99,7 +97,7 @@ const TransactionForm = () => {
           </Form.Group>
 
           <div className="text-center">
-            <Button variant="outline-info" type="submit">
+            <Button variant="primary" type="submit">
               Submit Transaction
             </Button>
           </div>

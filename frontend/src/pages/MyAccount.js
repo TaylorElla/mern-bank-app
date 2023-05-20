@@ -25,20 +25,8 @@ const MyAccount = () => {
       }
     };
 
-    const fetchUser = async () => {
-      const response = await fetch('https://taylorella-mern-stack-app.herokuapp.com/api/users/' + user._id, { // Change URL accordingly
-        headers: { 'Authorization': `Bearer ${user.token}` },
-      });
-      const json = await response.json();
-  
-      if (response.ok) {
-        dispatch({ type: 'UPDATE_BALANCE', payload: json.balance });
-      }
-    };
-
     if (user) {
       fetchTransactions();
-      fetchUser();
     }
   }, [dispatch, user]);
 

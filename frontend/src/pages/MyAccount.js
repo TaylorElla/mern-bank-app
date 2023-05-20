@@ -40,7 +40,7 @@ const MyAccount = () => {
               <Card.Text>
                 This is your account page! Here, you can easily deposit or withdraw money, allowing you to manage your funds according to your needs. Keep track of all your transactions conveniently in one place, so you always have a clear overview of your financial activity. Start exploring your account and take control of your financial journey today!
               </Card.Text>
-              
+              <Card.Text as='h5'>Your current balance is: ${user.balance}</Card.Text>
               <Card.Text>Below are your recent transactions:</Card.Text>
               <div className="transactions">
                 {transactions && transactions.map((transaction) => (

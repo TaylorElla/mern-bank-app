@@ -16,7 +16,7 @@ const CustomNavbar = () => {
 
   return (
     <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg" style={{ boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)' }}>
-      <Container fluid>
+      <Container>
         <Navbar.Brand as={Link} to="/">
           <div className="brand-content">
             <img

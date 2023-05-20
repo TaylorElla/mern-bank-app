@@ -9,28 +9,16 @@
 body {
   background-image: url("../public/images/background3.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   margin: 0;
+  padding: 0;
   font-family: "Poppins";
+  overflow: hidden;
 }
-header {
-  background: #fff;
-}
-header .container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-header a {
-  color: #333;
-  text-decoration: none;
-}
-.pages{
-  max-width: 1400px;
-  padding: 20px;
-  margin: 0 auto;
+
+html, body {
+  height: 100%;
 }
 
 /* Account page */

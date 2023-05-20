@@ -14,7 +14,7 @@ const Home = () => {
         <Card.Img variant="bottom" src="/images/bank3.png" />
         <Card.Body>
           <Card.Text>
-            Bank-App is an online-only bank that offers accounts to everyone. We offer a user-friendly interface to easily create accounts, deposits, and withdrawals. You can move around using the navigation bar.
+            BankApp is an online-only bank that offers accounts to everyone. We offer a user-friendly interface to easily create accounts, deposits, and withdrawals. You can move around using the navigation bar.
           </Card.Text>
         </Card.Body>
       </Card>

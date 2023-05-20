@@ -26,7 +26,7 @@ const CustomNavbar = () => {
               height="30"
               className="d-inline-block align-top"
             />
-            <h5>Bank-App</h5>
+            <h5>BankApp</h5>
           </div>
         </Navbar.Brand>
 

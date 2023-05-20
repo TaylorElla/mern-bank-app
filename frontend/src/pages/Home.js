@@ -10,7 +10,7 @@ const Home = () => {
       paddingTop: '50px' 
       }}>
       <Card className="text-center" bg="light" border="dark" style={{ width: '40rem', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)' }}>
-        <Card.Header as="h3">Welcome to the BankApp!</Card.Header>
+        <Card.Header className="text-center bg-dark text-light" as="h4">Welcome to the BankApp!</Card.Header>
         <Card.Img variant="bottom" src="/images/bank3.png" />
         <Card.Body>
           <Card.Text>

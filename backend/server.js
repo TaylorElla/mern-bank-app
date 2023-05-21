@@ -12,7 +12,7 @@ const userRoutes = require('./routes/user')
 const app = express()
 
 // enable CORS
-app.use(cors({origin: 'https://taylorella-mern-stack-app.netlify.app'}))
+app.use(cors({origin: 'https://ella-taylorfullstackbankingapp.netlify.app'}))
 
 
 // middleware

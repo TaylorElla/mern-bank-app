@@ -16,7 +16,7 @@ const MyAccount = () => {
 
   useEffect(() => {
     const fetchTransactions = async () => {
-      const response = await fetch('/api/transactions', {
+      const response = await fetch('https://taylorella-mern-stack-app.herokuapp.com/api/transactions', {
         headers: { 'Authorization': `Bearer ${user.token}` },
       });
       const json = await response.json();

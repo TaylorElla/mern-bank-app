@@ -9,7 +9,6 @@
 body {
   background-image: url("../public/images/background3.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
   margin: 0;
   padding: 0;
@@ -53,6 +52,12 @@ html, body {
   border-radius: 50%;
   color: #333;
 }
+.delete-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* new transaction form */
 label, input {

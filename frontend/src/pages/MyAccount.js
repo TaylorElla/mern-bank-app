@@ -1,19 +1,22 @@
 import React, { useEffect } from 'react';
 import { useTransactionsContext } from "../hooks/useTransactionsContext";
 import { useAuthContext } from "../hooks/useAuthContext";
-import { Card, Container, Row, Col } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
+import TransactionTable from '../components/TransactionTable';
 
-import TransactionDetails from '../components/TransactionDetails';
 import TransactionForm from '../components/TransactionForm';
 
 const MyAccount = () => {
-  const { transactions, dispatch } = useTransactionsContext();
+  const { dispatch } = useTransactionsContext();
   const { user } = useAuthContext();
 
   useEffect(() => {
     const fetchTransactions = async () => {
-      const response = await fetch('https://taylorella-mern-stack-app.herokuapp.com/api/transactions', {
+      const response = await fetch('/api/transactions', {
         headers: { 'Authorization': `Bearer ${user.token}` },
       });
       const json = await response.json();
@@ -37,14 +40,12 @@ const MyAccount = () => {
             <Card.Body>
               <Card.Text>
                 This is your account page! Here, you can easily deposit or withdraw money. Keep track of all your transactions conveniently in one place, so you always have a clear overview of your financial activity. Start exploring your account and take control of your financial journey today!
-              </Card.Text>
-              <Card.Text className="text-center" as='h5'>Your current balance is: ${user.balance}</Card.Text>
+              </Card.Text><br />
+              <Card.Text className="text-center" as='h5'>Your current balance is: ${user.balance}</Card.Text><br />
               <Card.Text>Below are your recent transactions:</Card.Text>
               <div className="transactions">
-                {transactions && transactions.map((transaction) => (
-                  <TransactionDetails key={transaction._id} transaction={transaction} />
-                ))}
-              </div>
+              <TransactionTable />
+            </div>
             </Card.Body>
           </Card>
         </Col>
